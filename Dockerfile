@@ -29,7 +29,4 @@ RUN apt-get install -y --no-install-recommends ./pgvectors.deb && \
 # Change to the uid of postgres (26)
 USER 26
 
-# From https://stackoverflow.com/a/42508925
-# Note that this way of enabling the plugin only works on database init
-# We should investigate alternative ways of enabling it that will always work
-COPY install-pgvectors.sql /docker-entrypoint-initdb.d/
+CMD ["postgres", "-c", "shared_preload_libraries=vectors.so"]

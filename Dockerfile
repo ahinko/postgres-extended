@@ -1,5 +1,5 @@
 # renovate: datasource=docker depName=ghcr.io/cloudnative-pg/postgresql
-ARG CNPG_TAG="16.1-5"
+ARG CNPG_TAG="16.1-6"
 
 FROM curlimages/curl:7.72.0 AS download
 

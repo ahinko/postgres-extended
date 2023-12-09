@@ -25,3 +25,13 @@ According to pgvecto.rs documentation we also need to run the following on each 
 DROP EXTENSION IF EXISTS vectors;
 CREATE EXTENSION vectors;
 ```
+
+Still unstested but if we need to upgrade the exstension the Postgred documentation mentions running:
+```sql
+ALTER EXTENSION vectors UPDATE
+```
+
+To check current exstension versions:
+```sql
+SELECT * FROM pg_extension;
+```

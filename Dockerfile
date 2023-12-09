@@ -4,7 +4,7 @@ ARG CNPG_TAG="16.1-5"
 FROM curlimages/curl:8.5.0 AS download
 
 # renovate: datasource=github-releases depName=tensorchord/pgvecto.rs
-ARG PGVECTORS_TAG="v0.1.10"
+ARG PGVECTORS_TAG="v0.1.11"
 ARG CNPG_TAG
 
 # Download pgvecto.rs

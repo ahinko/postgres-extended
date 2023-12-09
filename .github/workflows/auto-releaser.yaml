@@ -25,13 +25,13 @@ jobs:
     steps:
       - name: Find version increment (major, minor or patch) based on tags on pull request
         id: bump
-        uses: zwaldowski/match-label-action@v4.0
+        uses: zwaldowski/match-label-action@v4
         with:
           allowed: major, minor, patch
 
       - name: Calculate next version number
         id: next_version
-        uses: zwaldowski/semver-release-action@v3.0
+        uses: zwaldowski/semver-release-action@v3
         with:
           bump: ${{ steps.bump.outputs.match }}
           prefix: v

@@ -1,7 +1,7 @@
 # renovate: datasource=docker depName=ghcr.io/cloudnative-pg/postgresql
 ARG CNPG_TAG="16.1-5"
 
-FROM curlimages/curl:7.72.0 AS download
+FROM curlimages/curl:8.5.0 AS download
 
 # renovate: datasource=github-releases depName=tensorchord/pgvecto.rs
 ARG PGVECTORS_TAG="v0.1.10"

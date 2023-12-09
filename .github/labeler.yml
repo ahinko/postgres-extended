@@ -1,0 +1,14 @@
+---
+area/ci:
+  - changed-files:
+      - any-glob-to-any-file: ".github/**/*"
+area/docs:
+  - changed-files:
+      - any-glob-to-any-file: "docs/**/*"
+      - any-glob-to-any-file: "README.md"
+area/docker:
+  - changed-files:
+      - any-glob-to-any-file: "Dockerfile"
+area/script:
+  - changed-files:
+      - any-glob-to-any-file: "run.sh"

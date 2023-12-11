@@ -1,6 +1,12 @@
 # Postgres Extended
 
+*** This repo is still in development. I'm still testing different things to find the best way to load/enable the extension. Expect breaking changes. ***
+
 My custom Postgres Docker images with extensions that I need. Based on Cloudnative-PGs Postgres Docker images.
+
+## A note about Semver
+
+Cloudnative-PG requires the Docker image to be tagged with Postgres version, i.e. 16.1 and so on. So there is no way of updating the major version if I have to introduce breaking changes to this image.
 
 ## Added extensions:
 
@@ -13,7 +19,7 @@ DROP EXTENSION IF EXISTS vectors;
 CREATE EXTENSION vectors;
 ```
 
-Still unstested but if we need to upgrade the exstension the Postgred documentation mentions running:
+Still unstested but if we need to upgrade the exstension the Postgres documentation mentions running:
 ```sql
 ALTER EXTENSION vectors UPDATE
 ```

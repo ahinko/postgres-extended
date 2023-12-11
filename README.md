@@ -1,7 +1,7 @@
 # Postgres Extended
 
-[!IMPORTANT]
-**This repo is still in development. I'm still testing different things to find the best way to load/enable the extension. Expect breaking changes.**
+> [!IMPORTANT]
+> **This repo is still in development. I'm still testing different things to find the best way to load/enable the extension. There might be breaking changes (read "A note about Semver").**
 
 My custom Postgres Docker images with extensions that I need. Based on Cloudnative-PGs Postgres Docker images.
 

@@ -29,4 +29,4 @@ RUN apt-get install -y --no-install-recommends ./pgvectors.deb && \
 # Change to the uid of postgres (26)
 USER 26
 
-CMD ["postgres", "-c", "shared_preload_libraries=vectors.so"]
+CMD ["postgres", "-c", "shared_preload_libraries=vectors"]

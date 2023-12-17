@@ -1,8 +1,4 @@
 # Postgres Extended
-
-> [!IMPORTANT]
-> **This repo is still in development. I'm still testing different things to find the best way to load/enable the extension. There might be breaking changes (also read "A note about Semver").**
-
 My custom Postgres Docker images with extensions that I need. Based on Cloudnative-PGs Postgres Docker images.
 
 ## A note about Semver
@@ -26,16 +22,11 @@ Cloudnative-PG requires the Docker image to be tagged with Postgres version, i.e
 >       - "vectors.so"
 >   ```
 
-According to pgvecto.rs documentation we need to run the following on each database that will be using the vector extension.
+According to pgvecto.rs documentation we need to run the following on each database that will be using the vector extension. We also need to run these statements after each update of the pgvecto.rs extension.
 
 ```sql
 DROP EXTENSION IF EXISTS vectors;
 CREATE EXTENSION vectors;
-```
-
-Still unstested but if we need to upgrade the exstension the Postgres documentation mentions running:
-```sql
-ALTER EXTENSION vectors UPDATE
 ```
 
 To check current exstension versions:

@@ -1,5 +1,5 @@
 ---
-name: Build Docker image on release
+name: Build Docker image on manual release
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v4
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 

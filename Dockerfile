@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile-upstream:master
 # renovate: datasource=docker depName=ghcr.io/cloudnative-pg/postgresql
-ARG CNPG_TAG="16.1-16"
+ARG CNPG_TAG="16.1-17"
 
 FROM ghcr.io/cloudnative-pg/postgresql:$CNPG_TAG
 

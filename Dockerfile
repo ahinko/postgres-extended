@@ -5,7 +5,7 @@ ARG CNPG_TAG="16.1-18"
 FROM ghcr.io/cloudnative-pg/postgresql:$CNPG_TAG
 
 # renovate: datasource=github-releases depName=tensorchord/pgvecto.rs
-ARG PGVECTORS_TAG="v0.1.13"
+ARG PGVECTORS_TAG="v0.2.0"
 ARG CNPG_TAG
 
 # To install any package we need to be root

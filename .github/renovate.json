@@ -3,41 +3,84 @@
   "timezone": "Europe/Stockholm",
   "dependencyDashboard": true,
   "dependencyDashboardTitle": "🤖 Renovate Dashboard",
-  "suppressNotifications": ["prIgnoreNotification"],
+  "suppressNotifications": [
+    "prIgnoreNotification"
+  ],
   "rebaseWhen": "conflicted",
-  "assignees": ["@ahinko"],
-  "semanticCommits": true,
+  "assignees": [
+    "@ahinko"
+  ],
+  "semanticCommits": "enabled",
   "packageRules": [
     {
-      "datasources": ["docker", "github-releases"],
+      "matchDatasources": [
+        "docker",
+        "github-releases"
+      ],
       "enabled": true,
-      "updateTypes": ["major", "minor", "patch"]
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ]
     },
     {
-      "datasources": ["docker","github-releases"],
-      "updateTypes": ["major"],
-      "labels": ["renovate/image-release", "dependency/major"]
+      "matchDatasources": [
+        "docker",
+        "github-releases"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "labels": [
+        "renovate/image-release",
+        "dependency/major"
+      ]
     },
     {
-      "datasources": ["docker","github-releases"],
-      "updateTypes": ["minor"],
-      "labels": ["renovate/image-release", "dependency/minor", "minor"]
+      "matchDatasources": [
+        "docker",
+        "github-releases"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "labels": [
+        "renovate/image-release",
+        "dependency/minor",
+        "minor"
+      ]
     },
     {
-      "datasources": ["docker","github-releases"],
-      "updateTypes": ["patch"],
-      "labels": ["renovate/image-release", "dependency/patch", "patch"]
+      "matchDatasources": [
+        "docker",
+        "github-releases"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "labels": [
+        "renovate/image-release",
+        "dependency/patch",
+        "patch"
+      ]
     },
     {
-      "matchDatasources": ["docker"],
+      "matchDatasources": [
+        "docker"
+      ],
       "versioning": "regex:^(?<major>\\d{2}).(?<minor>\\d{1,2})-(?<patch>\\d{1,2})$",
-      "matchPackageNames": ["ghcr.io/cloudnative-pg/postgresql"]
+      "matchPackageNames": [
+        "ghcr.io/cloudnative-pg/postgresql"
+      ]
     }
   ],
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^Dockerfile$"],
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
       "matchStrings": [
         "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)\\n.*?\"(?<currentValue>.*)\"\\n"
       ]

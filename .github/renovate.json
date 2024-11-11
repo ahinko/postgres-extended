@@ -9,23 +9,23 @@
   "semanticCommits": "enabled",
   "packageRules": [
     {
-      "datasources": ["docker", "github-releases"],
+      "matchDatasources": ["docker", "github-releases"],
       "enabled": true,
-      "updateTypes": ["major", "minor", "patch"]
+      "matchUpdateTypes": ["major", "minor", "patch"]
     },
     {
-      "datasources": ["docker","github-releases"],
-      "updateTypes": ["major"],
+      "matchDatasources": ["docker","github-releases"],
+      "matchUpdateTypes": ["major"],
       "labels": ["renovate/image-release", "dependency/major"]
     },
     {
-      "datasources": ["docker","github-releases"],
-      "updateTypes": ["minor"],
+      "matchDatasources": ["docker","github-releases"],
+      "matchUpdateTypes": ["minor"],
       "labels": ["renovate/image-release", "dependency/minor", "minor"]
     },
     {
-      "datasources": ["docker","github-releases"],
-      "updateTypes": ["patch"],
+      "matchDatasources": ["docker","github-releases"],
+      "matchUpdateTypes": ["patch"],
       "labels": ["renovate/image-release", "dependency/patch", "patch"]
     },
     {

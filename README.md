@@ -7,7 +7,6 @@ Cloudnative-PG requires the Docker image to be tagged with Postgres version, i.e
 
 ## Added extensions:
 
-### [pgvecto.rs](https://github.com/tensorchord/pgvecto.rs)
 
 > [!IMPORTANT]
 > Enable the extension to both existing and new databases by adding the following to your Cluster spec.
@@ -19,13 +18,10 @@ Cloudnative-PG requires the Docker image to be tagged with Postgres version, i.e
 >   (...)
 >   postgresql:
 >     shared_preload_libraries:
->       - "vectors.so"
 >   ```
 
-According to pgvecto.rs documentation we need to run the following on each database that will be using the vector extension. We also need to run these statements after each update of the pgvecto.rs extension.
 
 ```sql
-ALTER EXTENSION vectors UPDATE;
 ```
 
 To check current exstension versions:

@@ -38,14 +38,3 @@ To check current exstension versions:
 ```sql
 SELECT * FROM pg_extension;
 ```
-
-
-
-
-
-> [!Important]
-> **BREAKING CHANGE, pgvecto.rs has been removed**
->
-> If you rely on this Docker image to run the Immich database on you should NOT upgrade to this version. pgvecto.rs has not published a Postgres 17 compatible package that this image used to install pgvecto.rs. Adding to that, it seems like Immich is moving away from pgvecto.rs, (see https://github.com/immich-app/immich/discussions/14280). Please keep using the 16.6.29 version of this image. 
-> 
-> I will add whatever extension and version Immich decides to use as soon as possible.

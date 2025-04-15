@@ -5,7 +5,7 @@ ARG CNPG_TAG="17.4-10"
 FROM ghcr.io/cloudnative-pg/postgresql:$CNPG_TAG
 
 # renovate: datasource=github-releases depName=timescale/timescaledb
-ARG TIMESCALE_VERSION="2.19.1"
+ARG TIMESCALE_VERSION="2.19.2"
 ARG CNPG_TAG
 ARG POSTGRES_VERSION=${CNPG_TAG%.*}
 
